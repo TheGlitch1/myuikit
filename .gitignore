@@ -1,0 +1,23 @@
+node_modules/
+dist/
+storybook-static/
+
+.env
+.env.*
+
+*.local
+*.log
+
+.DS_Store
+
+# AI assistant data
+.claude/
+
+# Design reference — not the product
+inspiration.html
+
+# Internal project planning
+features/
+user-stories/
+docs/
+CLAUDE.md

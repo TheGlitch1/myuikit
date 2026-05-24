@@ -1,0 +1,7 @@
+services:
+  myuikit:
+    build: .
+    container_name: myuikit
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8091:80"

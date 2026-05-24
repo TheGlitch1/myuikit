@@ -1,0 +1,185 @@
+@import '../tokens/tokens.css';
+
+/* ── Topbar ── */
+.topbar {
+  background: var(--bg2);
+  border-bottom: 1px solid var(--border);
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.topbar__title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.topbar__path {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.topbar__actions {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ── Tabs (part of AppLayout) ── */
+.tabs {
+  background: var(--bg2);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  padding: 0 16px;
+  gap: 4px;
+}
+
+.tab {
+  padding: 8px 14px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  color: var(--muted);
+  font-size: 12px;
+  transition: color 0.15s, border-bottom-color 0.15s;
+}
+
+.tab:hover {
+  color: var(--text);
+}
+
+.tab--active,
+.tab.active {
+  color: var(--text);
+  border-bottom-color: var(--blue);
+}
+
+.tab-badge {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  padding: 1px 6px;
+  font-size: 10px;
+  margin-left: 4px;
+}
+
+.tab-panel {
+  display: none;
+}
+
+.tab-panel--active,
+.tab-panel.active {
+  display: block;
+}
+
+/* ── Sidebar ── */
+.sidebar {
+  background: var(--bg2);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  overflow: hidden;
+  transition: width 0.2s ease;
+}
+
+.sidebar--collapsed {
+  width: 48px;
+}
+
+.sidebar__footer {
+  margin-top: auto;
+  border-top: 1px solid var(--border);
+  padding: 8px 0;
+}
+
+/* ── Nav Items ── */
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  color: var(--muted);
+  font-size: 12px;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s, color 0.15s;
+}
+
+.nav-item:hover {
+  background: var(--bg3);
+  color: var(--text);
+}
+
+.nav-item--active {
+  color: var(--text);
+  background: var(--bg3);
+  border-left: 2px solid var(--blue);
+  padding-left: 14px;
+}
+
+.nav-item__icon {
+  flex-shrink: 0;
+  width: 16px;
+  text-align: center;
+}
+
+.nav-item__label {
+  overflow: hidden;
+  opacity: 1;
+  transition: opacity 0.15s;
+}
+
+.sidebar--collapsed .nav-item__label {
+  opacity: 0;
+  width: 0;
+}
+
+/* ── AppLayout ── */
+.app-layout {
+  display: grid;
+  grid-template-areas:
+    "topbar topbar"
+    "sidebar main";
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 200px 1fr;
+  min-height: 100vh;
+  background: var(--bg);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-base);
+  color: var(--text);
+}
+
+.app-layout--sidebar-collapsed {
+  grid-template-columns: 48px 1fr;
+}
+
+.app-layout__topbar {
+  grid-area: topbar;
+}
+
+.app-layout__sidebar {
+  grid-area: sidebar;
+}
+
+.app-layout__main {
+  grid-area: main;
+  background: var(--bg);
+  overflow-y: auto;
+}
+
+@media (max-width: 640px) {
+  .app-layout {
+    grid-template-areas:
+      "topbar"
+      "main";
+    grid-template-columns: 1fr;
+  }
+
+  .app-layout__sidebar {
+    display: none;
+  }
+}

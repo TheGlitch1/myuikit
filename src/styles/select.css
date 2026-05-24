@@ -1,0 +1,70 @@
+@import '../tokens/tokens.css';
+
+.select-field {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  transition: border-color 0.15s;
+  overflow: hidden;
+}
+
+.select-field::after {
+  content: '▾';
+  position: absolute;
+  right: 10px;
+  color: var(--muted);
+  font-size: 10px;
+  pointer-events: none;
+  flex-shrink: 0;
+}
+
+.select-field:focus-within {
+  border-color: var(--blue);
+}
+
+.select-field--error {
+  border-color: var(--red);
+}
+
+.select-field--error:focus-within {
+  border-color: var(--red);
+}
+
+.select-field--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.select {
+  flex: 1;
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 6px 28px 6px 10px;
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-base);
+  cursor: pointer;
+  width: 100%;
+}
+
+.select:disabled {
+  cursor: not-allowed;
+}
+
+.select option {
+  background: var(--bg2);
+  color: var(--text);
+}
+
+.select__error-msg {
+  display: block;
+  color: var(--red);
+  font-size: 11px;
+  margin-top: 4px;
+}

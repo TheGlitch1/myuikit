@@ -1,0 +1,44 @@
+/*
+ * tokens.css — myUiLib Design Tokens
+ *
+ * Single source of truth for all CSS custom properties.
+ * Extracted from inspiration.html (GitHub-dark dashboard template).
+ * Every component CSS file must reference these tokens — no hardcoded values.
+ *
+ * Usage:
+ *   Import this file first in any consuming stylesheet.
+ *   All tokens are available globally via var(--token-name).
+ */
+
+:root {
+  /* Backgrounds */
+  --bg:  #0d1117;   /* Deepest page background */
+  --bg2: #161b22;   /* Card / panel background */
+  --bg3: #1c2128;   /* Input / hover / nested background */
+
+  /* Borders */
+  --border:        #30363d;  /* Default border */
+  --border-subtle: #21262d;  /* Row separators (table td, llm-stat-row, phase-feature) — promoted from hardcoded value */
+
+  /* Text */
+  --text:  #e6edf3;  /* Primary text */
+  --muted: #7d8590;  /* Secondary / label text */
+
+  /* Semantic */
+  --green:  #3fb950;  /* Success */
+  --yellow: #d29922;  /* Warning */
+  --red:    #f85149;  /* Error / danger */
+  --blue:   #58a6ff;  /* Primary action / link */
+  --purple: #bc8cff;  /* Accent */
+  --cyan:   #39d353;  /* Highlight (defined in source; reserved for future use) */
+
+  /* Typography */
+  --font-mono:      'SF Mono', 'Fira Code', monospace;
+  --font-size-base: 12px;
+
+  /* Border Radius */
+  --radius-sm:   3px;   /* Complexity badges, bar tracks */
+  --radius-md:   4px;   /* Badges, bar fills */
+  --radius-lg:   8px;   /* Cards, panels, log view */
+  --radius-pill: 10px;  /* Tab badges (pill shape) */
+}

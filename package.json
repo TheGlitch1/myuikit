@@ -1,0 +1,14 @@
+{
+  "name": "myuilib",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "storybook": "storybook dev --port 6006",
+    "build-storybook": "storybook build"
+  },
+  "devDependencies": {
+    "@storybook/html-vite": "^8.6.0",
+    "storybook": "^8.6.0",
+    "vite": "^6.3.0"
+  }
+}

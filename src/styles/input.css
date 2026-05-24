@@ -1,0 +1,64 @@
+@import '../tokens/tokens.css';
+
+.input-field {
+  display: flex;
+  align-items: center;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  transition: border-color 0.15s;
+  overflow: hidden;
+}
+
+.input-field:focus-within {
+  border-color: var(--blue);
+}
+
+.input-field--error {
+  border-color: var(--red);
+}
+
+.input-field--error:focus-within {
+  border-color: var(--red);
+}
+
+.input-field--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.input-field__prefix,
+.input-field__suffix {
+  padding: 0 8px;
+  color: var(--muted);
+  font-size: 11px;
+  flex-shrink: 0;
+}
+
+.input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 6px 10px;
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-base);
+  width: 100%;
+  min-width: 0;
+}
+
+.input::placeholder {
+  color: var(--muted);
+}
+
+.input:disabled {
+  cursor: not-allowed;
+}
+
+.input__error-msg {
+  display: block;
+  color: var(--red);
+  font-size: 11px;
+  margin-top: 4px;
+}
