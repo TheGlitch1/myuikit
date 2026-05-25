@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>myUiKit — a CSS-first design system</title>
+    <meta
+      name="description"
+      content="myUiKit is a CSS-first, framework-agnostic UI kit with a GitHub-dark aesthetic. Drop in one stylesheet and ship clean, dense, dashboard-grade components."
+    />
+    <link rel="stylesheet" href="/uikit/styles/index.css" />
+    <link rel="stylesheet" href="/landing.css" />
+  </head>
+  <body>
+    <main class="lp">
+      <!-- Hero -->
+      <header class="lp-hero">
+        <p class="lp-hero__eyebrow">CSS-first design system</p>
+        <h1 class="lp-hero__title">myUiKit</h1>
+        <p class="lp-hero__tagline">
+          A small, opinionated component library you can drop into any stack —
+          plain HTML, Vue, React, or a server-rendered template.
+          <span class="lp-hero__tagline-aside">CSS is the product.</span>
+        </p>
+        <div class="lp-hero__actions">
+          <a class="btn btn--primary btn--lg" href="/storybook/">Open Storybook</a>
+          <a class="btn btn--secondary btn--lg" href="#TODO-github" rel="noopener">GitHub</a>
+          <a class="btn btn--ghost btn--lg" href="#TODO-linkedin" rel="noopener">LinkedIn</a>
+        </div>
+      </header>
+
+      <!-- Positioning -->
+      <section class="lp-section">
+        <h2 class="lp-section__title">What this is</h2>
+        <div class="lp-prose">
+          <p>
+            myUiKit is a personal UI kit and frontend design system. It exists
+            so I can prototype admin dashboards and developer tools quickly,
+            without re-deciding what a button or a badge should look like every
+            time.
+          </p>
+          <p>
+            The aesthetic is GitHub-dark: dense, monospace-leaning, and built
+            for surfaces with a lot of data. Tokens live in
+            <code>:root</code> and components are written as plain BEM-lite CSS
+            — no preprocessor, no runtime, no framework lock-in.
+          </p>
+          <p>
+            A thin Vue 3 wrapper layer is available for projects that want
+            <code>v-model</code> and props, but the CSS works on its own. Use it
+            in React with <code>className</code>, in a Symfony/Twig template,
+            or in raw HTML.
+          </p>
+        </div>
+      </section>
+
+      <!-- Component previews -->
+      <section class="lp-section">
+        <h2 class="lp-section__title">Components</h2>
+
+        <!-- Button -->
+        <article class="lp-preview">
+          <div class="lp-preview__demo">
+            <div class="lp-stack">
+              <button class="btn btn--primary">Primary</button>
+              <button class="btn btn--secondary">Secondary</button>
+              <button class="btn btn--ghost">Ghost</button>
+              <button class="btn btn--danger">Danger</button>
+            </div>
+          </div>
+          <div class="lp-preview__code">
+            <header class="lp-preview__label">Button</header>
+<pre><code>&lt;button class="btn btn--primary"&gt;Primary&lt;/button&gt;
+&lt;button class="btn btn--secondary"&gt;Secondary&lt;/button&gt;
+&lt;button class="btn btn--ghost"&gt;Ghost&lt;/button&gt;
+&lt;button class="btn btn--danger"&gt;Danger&lt;/button&gt;</code></pre>
+          </div>
+        </article>
+
+        <!-- Badge -->
+        <article class="lp-preview">
+          <div class="lp-preview__demo">
+            <div class="lp-stack">
+              <span class="badge badge--success">Active</span>
+              <span class="badge badge--info">New</span>
+              <span class="badge badge--warning">Pending</span>
+              <span class="badge badge--error">Failed</span>
+              <span class="badge badge--neutral">Archived</span>
+            </div>
+          </div>
+          <div class="lp-preview__code">
+            <header class="lp-preview__label">Badge</header>
+<pre><code>&lt;span class="badge badge--success"&gt;Active&lt;/span&gt;
+&lt;span class="badge badge--info"&gt;New&lt;/span&gt;
+&lt;span class="badge badge--warning"&gt;Pending&lt;/span&gt;
+&lt;span class="badge badge--error"&gt;Failed&lt;/span&gt;
+&lt;span class="badge badge--neutral"&gt;Archived&lt;/span&gt;</code></pre>
+          </div>
+        </article>
+
+        <!-- Card -->
+        <article class="lp-preview">
+          <div class="lp-preview__demo">
+            <div class="card lp-preview__card">
+              <h3 class="card__title">DEPLOYMENT</h3>
+              <div class="card__body">
+                Production build deployed at 14:32 UTC.
+                <span class="badge badge--success">passing</span>
+              </div>
+              <div class="card__footer">
+                <button class="btn btn--ghost btn--sm">View logs</button>
+                <button class="btn btn--secondary btn--sm">Rollback</button>
+              </div>
+            </div>
+          </div>
+          <div class="lp-preview__code">
+            <header class="lp-preview__label">Card</header>
+<pre><code>&lt;div class="card"&gt;
+  &lt;h3 class="card__title"&gt;DEPLOYMENT&lt;/h3&gt;
+  &lt;div class="card__body"&gt;
+    Production build deployed at 14:32 UTC.
+    &lt;span class="badge badge--success"&gt;passing&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class="card__footer"&gt;
+    &lt;button class="btn btn--ghost btn--sm"&gt;View logs&lt;/button&gt;
+    &lt;button class="btn btn--secondary btn--sm"&gt;Rollback&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+        </article>
+
+        <!-- Input -->
+        <article class="lp-preview">
+          <div class="lp-preview__demo">
+            <div class="form-field lp-preview__field">
+              <label class="form-field__label form-field__label--required" for="lp-email">
+                Email
+              </label>
+              <div class="input-field">
+                <input
+                  id="lp-email"
+                  class="input"
+                  type="email"
+                  placeholder="you@example.com"
+                />
+              </div>
+              <span class="form-field__help">We'll never share it.</span>
+            </div>
+          </div>
+          <div class="lp-preview__code">
+            <header class="lp-preview__label">Input</header>
+<pre><code>&lt;div class="form-field"&gt;
+  &lt;label class="form-field__label form-field__label--required"&gt;
+    Email
+  &lt;/label&gt;
+  &lt;div class="input-field"&gt;
+    &lt;input class="input" type="email"
+           placeholder="you@example.com" /&gt;
+  &lt;/div&gt;
+  &lt;span class="form-field__help"&gt;We'll never share it.&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+        </article>
+
+        <!-- Select -->
+        <article class="lp-preview">
+          <div class="lp-preview__demo">
+            <div class="form-field lp-preview__field">
+              <label class="form-field__label" for="lp-env">Environment</label>
+              <div class="select-field">
+                <select id="lp-env" class="select">
+                  <option>production</option>
+                  <option>staging</option>
+                  <option>development</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="lp-preview__code">
+            <header class="lp-preview__label">Select</header>
+<pre><code>&lt;div class="form-field"&gt;
+  &lt;label class="form-field__label"&gt;Environment&lt;/label&gt;
+  &lt;div class="select-field"&gt;
+    &lt;select class="select"&gt;
+      &lt;option&gt;production&lt;/option&gt;
+      &lt;option&gt;staging&lt;/option&gt;
+      &lt;option&gt;development&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+        </article>
+      </section>
+
+      <!-- Storybook CTA -->
+      <section class="lp-section lp-cta">
+        <h2 class="lp-section__title">Browse every component</h2>
+        <p class="lp-prose">
+          The full interactive documentation lives in Storybook — every variant,
+          state, and prop, with live source you can copy.
+        </p>
+        <a class="btn btn--primary btn--lg" href="/storybook/">Open Storybook →</a>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="lp-footer">
+      <div class="lp-footer__inner">
+        <p class="lp-footer__signature">Built by <span>Yassine</span> — TODO signature.</p>
+        <nav class="lp-footer__links">
+          <a class="lp-link" href="#TODO-github" rel="noopener">GitHub</a>
+          <a class="lp-link" href="#TODO-linkedin" rel="noopener">LinkedIn</a>
+          <a class="lp-link" href="/storybook/">Storybook</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
