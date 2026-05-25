@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "storybook": "storybook dev --port 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "build:storybook": "storybook build"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^8.6.0",
